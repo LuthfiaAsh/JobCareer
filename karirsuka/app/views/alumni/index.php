@@ -4,7 +4,7 @@
     <div class="input-group justify-content-md-center m-0 p-5" id="formsearch">
 
       <form class="d-flex" action="<?= BASE_URL; ?>alumni/doFinding" method="POST" style="margin-bottom: 130px;">
-        <input class="form-control" type="search" id="keyword" name="keyword" placeholder="Job Title or Keyword" aria-label="Search" required>
+        <input class="form-control" type="search" id="keyword" name="keyword" placeholder="Job Title/Keyword" aria-label="Search" required>
         <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="location" id="location" required>
           <option value='' selected>Job Location</option>
           <option value='0'>Indonesia</option>
