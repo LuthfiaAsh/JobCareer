@@ -6,7 +6,7 @@
       <div class="input-group mt-5 m-auto justify-content-center">
 
         <form class="d-flex" action="<?= BASE_URL; ?>alumni/doFinding" method="POST">
-          <input class="form-control" type="search" name="keyword" id="keyword" placeholder="Job Title or Keyword" aria-label="Search" required>
+          <input class="form-control" type="search" name="keyword" id="keyword" placeholder="Job Title/Keyword" aria-label="Search" required>
           <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="location" id="location" required>
             <option value='' selected>Job Location</option>
             <option value='0'>Indonesia</option>
@@ -26,51 +26,17 @@
   <?php
   if (isset($_POST["cari"])) {
   ?>
-    <h6>Result</h6>
+    <h6 style="text-align:left; margin-left:100px;">Result</h6>
     <h8 style="color:#A4A4A4"><?= $_POST["keyword"] . ', ' . ($_POST["location"] == 0 ? "Indonesia"  : "Outside Indonesia"); ?></h8>
     <br><br>
   <?php
   }
   ?>
 
-  <!-- Check box -->
   <div class="container">
-    <div class="row">
-      <div class="col-sm-4 border shadow-sm p-3 mb-5 bg-body rounded">
-        <h6>Tahun</h6>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" style="color:#A4A4A4" for="flexCheckDefault">2021</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" style="color:#A4A4A4" for="flexCheckDefault">2020</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" style="color:#A4A4A4" for="flexCheckDefault">2019</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" style="color:#A4A4A4" for="flexCheckDefault">2018</label>
-        </div><br>
-
-        <h6>Tipe</h6>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" style="color:#A4A4A4" for="flexCheckDefault">Internship</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" style="color:#A4A4A4" for="flexCheckDefault">Full Time</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" style="color:#A4A4A4" for="flexCheckDefault">Part Time</label>
-        </div>
-      </div>
-
-      <div class="col-sm-8 border shadow-sm p-3 mb-5 bg-body rounded">
+    <div class="row row-centered">
+        
+      <div class="col-sm-10 border shadow-sm p-3 m-auto bg-body rounded">
         <div class="container">
 
           <?php
@@ -79,7 +45,7 @@
 
             <div class="card p-4">
               <div class="row">
-                <div class="col d-flex align-items-center">
+                <div class="col d-flex align-items-center mr-3">
                   <?= '<img src="data:image/jpeg;base64,' . base64_encode($lowongan['fotoPerush']) . '" alt="Logo" style="width:120px;">' ?>
                 </div>
 
